@@ -1,0 +1,17 @@
+<ion-view view-title="Chats">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="curs in cursos" type="item-text-wrap" href="#/tab/chats/{{curs.id}}">
+        <h2>{{curs.titol}}</h2>
+        <p>Horari: {{curs.horari}}</p>
+        <p>Dates: {{curs.dates}}</p>
+        <p>Professor: {{curs.professor}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(curs)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
