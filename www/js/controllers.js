@@ -4,7 +4,7 @@ angular.module('starter.controllers', [])
   $scope.nombre = 'Xavi';
 })
 
-.controller('ChatsCtrl', function($scope, Chats) {
+.controller('ChatsCtrl', function($scope) {
 
   $scope.cursos = [
       {
@@ -34,7 +34,30 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ConfiguracioCtrl', function($scope) {
-
   $scope.opcio = 'ES';
+})
 
-});
+.controller('ProvaCtrl', function($scope,$ionicBackdrop,$timeout) {
+    $scope.saludo = 'Xavi';
+
+    $scope.action = function() {
+        $ionicBackdrop.retain();
+        $timeout(this.release,3000);
+    };
+
+    $scope.release = function() {
+        $ionicBackdrop.release();
+    }
+
+    // Execute action on backdrop disappearing
+    $scope.$on('backdrop.hidden', function() {
+        console.log('hidden');
+    });
+
+    // Execute action on backdrop appearing
+    $scope.$on('backdrop.shown', function() {
+        console.log('hidden');
+    });
+
+})
+;

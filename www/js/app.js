@@ -77,7 +77,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'ConfiguracioCtrl'
       }
     }
-  });
+  })
+
+    .state('tab.prova', {
+        url: '/prova',
+        views: {
+            'tab-account': {
+                templateUrl: 'templates/tab-prova.html',
+                controller: 'ProvaCtrl'
+            }
+        }
+    }) ;
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
