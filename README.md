@@ -25,3 +25,5 @@ More info on this can be found on the Ionic [Getting Started](https://ionicframe
 
 Issues have been disabled on this repo. If you do find an issue or have a question, consider posting it on the [Ionic Forum](https://forum.ionicframework.com/). If there is truly an error, follow our guidelines for [submitting an issue](https://ionicframework.com/submit-issue/) to the main Ionic repository.
 # PuntMultimediaApp
+
+Repo with all resources for the Ionic demo course at Punt Multimedia
