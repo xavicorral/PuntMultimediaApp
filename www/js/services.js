@@ -47,4 +47,46 @@ angular.module('starter.services', [])
       return null;
     }
   };
+})
+
+.factory('Cursos', function() {
+
+  var llistaCursos = [
+      {
+        id: 3953,
+        titol: 'Aprofundeix amb les eines i mòduls de Photoshop',
+        horari: 'dilluns de 19  a 21 h',
+        dates: 'del 9 d’octubre al 20 de novembre (14 hores)',
+        professor: 'Marc Carmona'
+      },
+      {
+        id: 3950,
+        titol: 'Crea apps mòbil amb html 5 i Iònic',
+        horari: 'dimecres i divendres de 19  a 21 h',
+        dates: 'del 8 al 29 de novembre (14 hores)',
+        professor: 'Xavi Corral'
+      },
+      {
+        id: 3957,
+        titol: 'Aprèn WordPress per crear webs professionals',
+        horari: 'dilluns de 19  a 21 h',
+        dates: 'del 20 de novembre a l’11 de desembre (8 hores)',
+        professor: 'Oriol Blas'
+      }
+  ];
+
+  var metodos = {
+    all: function () {
+        return llistaCursos;
+    },
+    get: function (cursId) {
+      for(var i=0; i < llistaCursos.length; i++) {
+        if (llistaCursos[i].id == cursId) {
+          return llistaCursos[i];
+        }
+      }
+    }
+  };
+
+  return metodos;
 });

@@ -4,18 +4,18 @@ angular.module('starter.controllers', [])
   $scope.nombre = 'Xavi';
 })
 
-.controller('ChatsCtrl', function($scope) {
+.controller('CursosCtrl', function($scope) {
 
   $scope.cursos = [
       {
-        'id': 1,
+        'id': 3950,
         'titol': 'Crea apps mòbil amb html 5 i Iònic',
         'horari': 'dimecres i divendres de 19  a 21 h',
         'dates': 'del 8 al 29 de novembre (14 hores)',
         'professor': 'Xavi Corral'
       },
       {
-        'id': 2,
+        'id': 3953,
         'titol': 'Aprofundeix amb les eines i mòduls de Photoshop',
         'horari': 'dilluns de 19  a 21 h',
         'dates': 'del 9 d’octubre al 20 de novembre (14 hores)',
@@ -23,14 +23,15 @@ angular.module('starter.controllers', [])
       }
   ];
 
-/*  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };*/
+  /*
+  $scope.cursos = Cursos.all();
+   */
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+.controller('CursDetailCtrl', function($scope, $stateParams, Cursos) {
+    console.log('getting curs ' + $stateParams.cursId);
+    $scope.curs = Cursos.get($stateParams.cursId);
+    console.log($scope.curs);
 })
 
 .controller('ConfiguracioCtrl', function($scope) {
