@@ -5,6 +5,12 @@
     padding: 50px;
 }
 
+.fondoPrincipal {
+    background-image: url('/img/informatica.jpg');
+    opacity: 0.5;
+    height: 500px;
+}
+
 .contingut{
     padding: 30px;
 }
