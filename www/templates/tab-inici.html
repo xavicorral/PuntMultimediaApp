@@ -5,17 +5,28 @@
       <img src="img/FAB_Web.png">
     </div>
 
-    <h2>Benvinguts a la Agenda de cursos del Punt Multimèdia</h2>
+
+    <div class="row">
+      <h2>Benvinguts a la Agenda de cursos del Punt Multimèdia</h2>
+    </div>
 
     <div class="fondoPrincipal">
-        <div class="fondoSecundario">
-          <p>
-           Hola, {{nombre}}
-          </p>
-          <p>
-            Per apuntar-te als cursos ho pots fer venint al Punt Multimèdia i fer la inscripció, o a través de la pàgina web i fer el pagament per transfarència bancària.
-          </p>
-      </div>
+      <div class="fondoSecundario">
+        <p>
+         Hola, {{nombre}}
+        </p>
+        <p>
+          Per apuntar-te als cursos ho pots fer venint al Punt Multimèdia i fer la inscripció, o a través de la pàgina web i fer el pagament per transfarència bancària.
+        </p>
     </div>
+
+
+    <div class="contacto">
+      <p>Horari: {{ contacto.horario }}</p>
+      <p>Telefono: {{ contacto.telefono}}</p>
+      <p>ID: {{ contacto.idCentroCivico }}</p>
+      <p>puntmultimedia@puntmultimedia.org</p>
+    </div>
+
   </ion-content>
 </ion-view>

@@ -1,25 +1,33 @@
 angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {
-  $scope.nombre = 'Xavi';
+
+    $scope.nombre = 'Xavi';
+
+    $scope.contacto = {
+        horario: 'de 5 a 9',
+        telefono: '93 456 78 78',
+        idCentroCivico: 345
+    };
+
 })
 
 .controller('CursosCtrl', function($scope) {
 
   $scope.cursos = [
       {
-        'id': 3950,
-        'titol': 'Crea apps mòbil amb html 5 i Iònic',
-        'horari': 'dimecres i divendres de 19  a 21 h',
-        'dates': 'del 8 al 29 de novembre (14 hores)',
-        'professor': 'Xavi Corral'
+        id: 3950,
+        titol: 'Crea apps mòbil amb html 5 i Iònic',
+        horari: 'dimecres i divendres de 19  a 21 h',
+        dates: 'del 8 al 29 de novembre (14 hores)',
+        professor: 'Xavi Corral'
       },
       {
-        'id': 3953,
-        'titol': 'Aprofundeix amb les eines i mòduls de Photoshop',
-        'horari': 'dilluns de 19  a 21 h',
-        'dates': 'del 9 d’octubre al 20 de novembre (14 hores)',
-        'professor': 'Marc Carmona'
+        id: 3953,
+        titol: 'Aprofundeix amb les eines i mòduls de Photoshop',
+        horari: 'dilluns de 19  a 21 h',
+        dates: 'del 9 d’octubre al 20 de novembre (14 hores)',
+        professor: 'Marc Carmona'
       }
   ];
 
@@ -38,6 +46,7 @@ angular.module('starter.controllers', [])
   $scope.opcio = 'ES';
 })
 
+/*
 .controller('ProvaCtrl', function($scope,$ionicBackdrop,$timeout) {
     $scope.saludo = 'Xavi';
 
@@ -60,5 +69,5 @@ angular.module('starter.controllers', [])
         console.log('hidden');
     });
 
-})
+})*/
 ;
