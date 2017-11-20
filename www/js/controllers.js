@@ -1,5 +1,7 @@
 angular.module('starter.controllers', [])
 
+.constant('apiUrl','http://www.puntmultimedia.org/nova/wp-json/wp/v2/posts?categories=71')
+
 .controller('DashCtrl', function($scope) {
 
     $scope.nombre = 'Xavi';
@@ -12,8 +14,38 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('CursosCtrl', function($scope) {
+.controller('CursosCtrl', function($scope, $http, apiUrl) {
 
+    $http.get(apiUrl).then(
+        function(response) {
+            console.log('Ha ido todo bien!');
+            console.log(response);
+            $scope.cursos = response.data;
+        },
+        function(error) {
+            console.log('OJORRR ha fallado!!');
+            console.log(error);
+        }
+    );
+
+
+
+  /*  $scope.cursos = [];
+
+    $http.get(apiUrl).then(
+        function (response) {
+            console.log(response.data);
+            $scope.cursos = response.data;
+        }
+    );
+
+
+    console.log($scope.cursos);
+
+    //$scope.cursos = Cursos.all();
+*/
+
+  /*
   $scope.cursos = [
       {
         id: 3950,
@@ -30,6 +62,7 @@ angular.module('starter.controllers', [])
         professor: 'Marc Carmona'
       }
   ];
+  */
 
   /*
   $scope.cursos = Cursos.all();

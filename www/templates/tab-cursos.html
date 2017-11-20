@@ -2,10 +2,9 @@
   <ion-content>
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="curs in cursos" type="item-text-wrap" href="#/tab/cursos/{{curs.id}}">
-        <h2>{{curs.titol}}</h2>
-        <p>Horari: {{curs.horari}}</p>
-        <p>Dates: {{curs.dates}}</p>
-        <p>Professor: {{curs.professor}}</p>
+        <h2>{{curs.title.rendered}}</h2>
+        <p>Content: <span ng-bind-html="curs.content.rendered"></span></p>
+
         <i class="icon ion-chevron-right icon-accessory"></i>
 
         <ion-option-button class="button-assertive" ng-click="remove(curs)">

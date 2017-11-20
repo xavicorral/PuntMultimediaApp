@@ -1,5 +1,7 @@
 angular.module('starter.services', [])
 
+
+
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
@@ -49,7 +51,7 @@ angular.module('starter.services', [])
   };
 })
 
-.factory('Cursos', function() {
+.factory('Cursos', function($http,$q,apiUrl) {
 
   var llistaCursos = [
       {
